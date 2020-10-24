@@ -5,6 +5,7 @@
 
 ## Домашние работы курса
 * homework1
+* homework2
 
 ### Обо мне
 [Мой LinkedIn](https://www.linkedin.com/in/антон-торопов-ba35a4100/)
