@@ -15,8 +15,12 @@ def exponentiation(*args, power=2):
     return list(map(lambda x: pow(x, power), args))
 
 
-print(exponentiation(1, 2, 3))
-print(exponentiation(1, 2, 3, power=3))
+print('Squaring: ', exponentiation(1, 2, 3))
+print('Exponentiation:', exponentiation(1, 2, 3, power=3))
+
+#Example work
+# Squaring:  [1, 4, 9]
+# Exponentiation: [1, 8, 27]
 
 
 def is_prime(num):
@@ -54,11 +58,15 @@ def filter_numbers(*args, type_filter=None):
         sys.exit(1)
 
 
-print(filter_numbers(1, 3, 4, 5, 8, 9, type_filter='EVEN_NUMBERS'))
-print(filter_numbers(1, 3, 4, 5, 8, 9, type_filter='ODD_NUMBERS'))
-print(filter_numbers(1, 3, 4, 5, 8, 9, type_filter='PRIME_NUMBERS'))
-#print(filter_numbers(1, 3, 4, 5, 8, 9, type_filter='1'))
-#print(filter_numbers(1, 3, 4, 5, 8, 9))
+print('Only even:', filter_numbers(1, 3, 4, 5, 8, 9, type_filter='EVEN_NUMBERS'))
+print('Only odd:', filter_numbers(1, 3, 4, 5, 8, 9, type_filter='ODD_NUMBERS'))
+print('Prime number:', filter_numbers(1, 3, 4, 5, 8, 9, type_filter='PRIME_NUMBERS'))
+
+#Example work
+# Only even: [4, 8]
+# Only odd: [1, 3, 5, 9]
+# Prime number: [1, 3, 5]
+
 
 #Создать декоратор для замера времени выполнения функции
 def benchmark(func):
@@ -73,9 +81,14 @@ def benchmark(func):
 
 @benchmark
 def example():
-    print('Start')
+    print('Start function')
     time.sleep(2)
-    print('End')
+    print('End function')
 
 
 example()
+
+#Example work
+# Start function
+# End function
+# Time run:  2.0008256435394287
