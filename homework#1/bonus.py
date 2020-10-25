@@ -22,15 +22,19 @@ def trace(delimiter):
 
 @trace("____")
 def fib(n):
-    if n <= 2:
+    if n in (1, 2):
         return 1
+    elif n == 0:
+        return 0
+    elif n < 0:
+        raise Exception('Only positive numbers')
     else:
         return fib(n - 1) + fib(n - 2)
 
 
 fib(5)
 
-#Example work
+# Example work
 #  --> fib(5)
 # ____ --> fib(4)
 # ________ --> fib(3)
