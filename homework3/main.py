@@ -22,9 +22,6 @@ sources = [
 ]
 
 
-# db_url = "postgres://postgres:password@localhost:5432/demo",
-# modules = {'models': ['aerich.models', 'models']}
-
 async def init():
     await Tortoise.init(TORTOISE_ORM)
     await Tortoise.generate_schemas()
