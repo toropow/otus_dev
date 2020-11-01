@@ -1,0 +1,5 @@
+{
+  "upgrade": [
+    "CREATE TABLE IF NOT EXISTS \"aerich\" (\n    \"id\" SERIAL NOT NULL PRIMARY KEY,\n    \"version\" VARCHAR(255) NOT NULL,\n    \"app\" VARCHAR(20) NOT NULL,\n    \"content\" TEXT NOT NULL\n);\nCREATE TABLE IF NOT EXISTS \"albums\" (\n    \"userId\" INT NOT NULL,\n    \"id\" SERIAL NOT NULL PRIMARY KEY,\n    \"title\" TEXT NOT NULL\n);\nCREATE TABLE IF NOT EXISTS \"photos\" (\n    \"id\" SERIAL NOT NULL PRIMARY KEY,\n    \"title\" TEXT NOT NULL,\n    \"url\" VARCHAR(255) NOT NULL,\n    \"thumbnailUrl\" TEXT NOT NULL,\n    \"albumId_id\" INT NOT NULL REFERENCES \"albums\" (\"id\") ON DELETE CASCADE\n);"
+  ]
+}

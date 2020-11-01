@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from aiohttp import ClientSession
 import asyncio
 import models
+from config import TORTOISE_ORM
 
 ALBUMS = 'albums'
 PHOTOS = 'photos'
@@ -21,11 +22,11 @@ sources = [
 ]
 
 
+# db_url = "postgres://postgres:password@localhost:5432/demo",
+# modules = {'models': ['aerich.models', 'models']}
+
 async def init():
-    await Tortoise.init(
-        db_url="postgres://postgres:password@localhost:5432/demo",
-        modules={'models': ['models']}
-    )
+    await Tortoise.init(TORTOISE_ORM)
     await Tortoise.generate_schemas()
 
 
