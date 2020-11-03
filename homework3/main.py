@@ -46,8 +46,8 @@ async def get_data_from_src(src: Source):
 
 async def albums_write(albums: list):
     for album in albums:
-        await models.Albums.create(
-            userId=album['userId'],
+        await models.Album.create(
+            user_id=album['userId'],
             id=album['id'],
             title=album['title']
         )
@@ -55,12 +55,12 @@ async def albums_write(albums: list):
 
 async def photos_write(photos: list):
     for photo in photos:
-        await models.Photos.create(
-            albumId_id=photo['albumId'],
+        await models.Photo.create(
+            album_id_id=photo['albumId'],
             id=photo['id'],
             title=photo['title'],
             url=photo['url'],
-            thumbnailUrl=photo['thumbnailUrl']
+            thumbnail_url=photo['thumbnailUrl']
         )
 
 
