@@ -1,0 +1,8 @@
+{
+  "upgrade": [
+    "CREATE TABLE IF NOT EXISTS \"test_my\" (\n    \"some_field\" INT,\n    \"id\" SERIAL NOT NULL PRIMARY KEY,\n    \"text\" TEXT\n);"
+  ],
+  "downgrade": [
+    "DROP TABLE IF EXISTS \"test_my\""
+  ]
+}

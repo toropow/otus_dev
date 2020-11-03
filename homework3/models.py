@@ -27,3 +27,13 @@ class Photo(Model):
 
     class Meta:
         table = "photos"
+
+
+class TestMigration(Model):
+    some_field = fields.IntField(null=True)
+    id = fields.IntField(pk=True)
+    text = fields.TextField(null=True)
+
+    class Meta:
+        table = "test_my"
+
