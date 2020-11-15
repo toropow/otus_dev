@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %} Список участников {% endblock %}
+{% block content %}
+<div class="container">
+
+    <div class="row justify-content-md-center mt-2">
+        <div class="alert alert-info" role="alert">
+            <h3>Участинки олимпиады</h3>
+        </div>
+    </div>
+    <div class="row justify-content-md-center mb-2">
+        <a href="{{ url_for('student_app.reg_form') }}">
+            <button type="button" class="btn btn-primary">Регистрация участника</button>
+        </a>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col col-12 col-md-8 col-lg-6">
+            <ul class="list-group">
+                {% for participant in participants %}
+                <li class="list-group-item product-item">
+                    <a> {{ participant.firstname }} {{ participant.lastname }} </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
