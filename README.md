@@ -9,6 +9,7 @@
 * [homework3](homework3)
 * [homework4](homework4)
 * [homework5](homework5)
+* [homework6](homework6)
 
 ### Обо мне
 [Мой LinkedIn](https://www.linkedin.com/in/антон-торопов-ba35a4100/)
