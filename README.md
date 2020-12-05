@@ -10,6 +10,7 @@
 * [homework4](homework4)
 * [homework5](homework5)
 * [homework6](homework6)
+* [homework7](homework7)
 
 ### Обо мне
 [Мой LinkedIn](https://www.linkedin.com/in/антон-торопов-ba35a4100/)

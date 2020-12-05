@@ -5,7 +5,8 @@ class PublishingHouse(models.Model):
     name = models.CharField(max_length=32, unique=True)
     address = models.CharField(max_length=256)
 
-    unique_together = ['name', 'address']
+    class Meta:
+        unique_together = ['name', 'address']
 
 
 class Author(models.Model):
