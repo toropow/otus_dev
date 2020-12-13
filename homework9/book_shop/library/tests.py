@@ -1,7 +1,8 @@
 from django.test import TestCase
 from .models import Review, Author
 from django.test import Client
-
+from django.urls import reverse
+from .views import BookView
 
 class TestModel(TestCase):
     def setUp(self):
@@ -35,7 +36,8 @@ class TestView(TestCase):
         pass
 
     def test_index(self):
-        response = self.client.get('/')
+        url = reverse('library:index')
+        response = self.client.get(url)
         self.assertEqual(200, response.status_code)
 
     def test_context_paginate(self):
